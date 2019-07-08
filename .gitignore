@@ -1,0 +1,5 @@
+.undodir
+.vagrant
+*.log
+session.vim
+workspace
