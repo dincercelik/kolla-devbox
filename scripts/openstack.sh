@@ -5,7 +5,7 @@ set -e
 source /openstack/config.sh
 
 test -e $BASE || mkdir $BASE && cd $BASE
-test -z "$OPENSTACK_VERSION" && REPOSITORY="master" || REPOSITORY="stable/$OPENSTACK_VERSION"
+test -z "$OPENSTACK_RELEASE" && REPOSITORY="master" || REPOSITORY="stable/$OPENSTACK_RELEASE"
 
 if ! [ -e /usr/local/share/kolla ]; then
   test -e kolla || mkdir kolla && cd kolla
