@@ -11,6 +11,6 @@ echo "Installing Docker..."
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 which docker || apt -yqq install docker-ce
-usermod -a -G docker vagrant
+usermod -a -G docker $USER
 
 exit 0
