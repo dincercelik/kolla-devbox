@@ -2,9 +2,9 @@
 
 set -e
 
-source /openstack/config.sh
+source config.sh
 
-test -e $BASE || mkdir $BASE && cd $BASE
+test -e $BASE || mkdir -p $BASE && cd $BASE
 test -z "$OPENSTACK_RELEASE" && REPOSITORY="master" || REPOSITORY="stable/$OPENSTACK_RELEASE"
 
 if ! [ -e /usr/local/share/kolla ]; then
