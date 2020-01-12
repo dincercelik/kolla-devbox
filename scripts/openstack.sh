@@ -58,4 +58,7 @@ for helper in "${!helpers[@]}"; do
   which $helper || pip3 install ${helpers[$helper]}
 done
 
+echo "Setting permissions..."
+chown -R $SUDO_USER:$SUDO_USER /etc/kolla
+
 exit 0
