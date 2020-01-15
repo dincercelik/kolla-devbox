@@ -10,6 +10,7 @@ apt -yqq full-upgrade
 
 echo "Installing Python..."
 which python3 || apt-get -yqq install python3-minimal
+test -e /etc/alternatives/python || update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
 echo "Installing Pip..."
 which pip3 || apt-get -yqq install python3-pip
