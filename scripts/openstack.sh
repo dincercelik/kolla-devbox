@@ -2,7 +2,7 @@
 
 set -e
 
-source config.sh
+source $(find . -maxdepth 2 -name config.sh -print)
 
 test -e $BASE || mkdir -p $BASE && cd $BASE
 test -z "$OPENSTACK_RELEASE" && REPOSITORY="master" || REPOSITORY="stable/$OPENSTACK_RELEASE"
