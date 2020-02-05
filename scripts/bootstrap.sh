@@ -16,8 +16,7 @@ echo "Installing Pip..."
 which pip3 || apt-get -yqq install python3-pip
 
 echo "Installing Ansible..."
-add-apt-repository -y ppa:ansible/ansible-2.9
-which ansible || apt -yqq install ansible
+which ansible || pip3 install ansible==2.9.*
 
 echo "Installing Git..."
 which git || apt -yqq install git
