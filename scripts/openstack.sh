@@ -15,7 +15,7 @@ if ! [ -e /usr/local/share/kolla ]; then
 
   echo "Installing dependencies..."
   pip3 install -r requirements.txt
-  which tox || pip3 install tox
+  which tox || pip3 install tox "virtualenv<20"
 
   echo "Installing Kolla..."
   tox -e genconfig
