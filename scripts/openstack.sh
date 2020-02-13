@@ -40,6 +40,7 @@ if ! [ -e /usr/local/share/kolla-ansible ]; then
   python3 setup.py install
 
   echo "Installing configuration files..."
+  install -m 0644 -D $BASE/kolla-ansible/contrib/bash-completion/kolla-ansible /etc/bash_completion.d/kolla-ansible
   install -m 0644 -D /usr/local/share/kolla-ansible/etc_examples/kolla/globals.yml /etc/kolla/globals.yml
   install -m 0640 -D /usr/local/share/kolla-ansible/etc_examples/kolla/passwords.yml /etc/kolla/passwords.yml
   install -m 0644 -D /usr/local/share/kolla-ansible/ansible/inventory/all-in-one /etc/kolla/inventory/all-in-one
