@@ -1,2 +1,2 @@
-export BASE=/openstack/workspace
-export OPENSTACK_RELEASE=train
+BASE=/openstack/workspace
+OPENSTACK_RELEASE=train
