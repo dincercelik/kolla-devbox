@@ -19,7 +19,7 @@ if ! [ -e /usr/local/share/kolla ]; then
   test -e kolla || mkdir kolla && cd kolla
 
   echo "Downloading Kolla..."
-  test -e setup.py || git clone https://github.com/openstack/kolla.git -b $REPOSITORY .
+  test -e setup.py || git clone https://opendev.org/openstack/kolla.git -b $REPOSITORY .
 
   echo "Installing dependencies..."
   pip3 install -r requirements.txt
@@ -40,7 +40,7 @@ if ! [ -e /usr/local/share/kolla-ansible ]; then
   test -e kolla-ansible || mkdir kolla-ansible && cd kolla-ansible
 
   echo "Downloading Kolla-Ansible..."
-  test -e setup.py || git clone https://github.com/openstack/kolla-ansible.git -b $REPOSITORY .
+  test -e setup.py || git clone https://opendev.org/openstack/kolla-ansible.git -b $REPOSITORY .
 
   echo "Installing dependencies..."
   pip3 install -r requirements.txt
