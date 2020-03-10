@@ -1,7 +1,7 @@
 kolla_base_distro: "ubuntu"
 kolla_install_type: "binary"
 network_interface: "enp0s3"
-neutron_external_interface: "fake_interface"
+neutron_external_interface: "fake_ethernet"
 kolla_internal_vip_address: "10.0.2.100"
 docker_restart_policy: "no"
 docker_custom_config:
