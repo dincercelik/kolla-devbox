@@ -5,12 +5,12 @@ set -e
 export DEBIAN_FRONTEND=noninteractive
 
 echo "Installing dependencies..."
-apt -yqq install apt-transport-https ca-certificates curl software-properties-common
+apt -y install apt-transport-https ca-certificates curl software-properties-common
 
 echo "Installing Docker..."
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-which docker || apt -yqq install docker-ce
-usermod -a -G docker $SUDO_USER
+command -v docker || apt -y install docker-ce
+usermod -a -G docker "$SUDO_USER"
 
 exit 0

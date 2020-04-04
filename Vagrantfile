@@ -28,7 +28,6 @@ Vagrant.configure("2") do |config|
   config.vm.define "openstack", primary: true do |openstack|
     openstack.vm.box = "ubuntu/bionic64"
     openstack.vm.hostname = "openstack"
-    openstack.vm.network :private_network, ip: "10.10.10.10"
   end
 
   config.vm.box_check_update = false
