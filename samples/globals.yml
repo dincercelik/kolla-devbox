@@ -8,3 +8,4 @@ docker_custom_config:
   debug: true
 openstack_logging_debug: "True"
 openstack_service_workers: "1"
+openstack_release: "train"
