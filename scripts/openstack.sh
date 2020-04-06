@@ -72,7 +72,7 @@ helpers["cinder"]="python-cinderclient"
 helpers["neutron"]="python-neutronclient"
 
 for helper in "${!helpers[@]}"; do
-  command -v $helper || $PIP install ${helpers[$helper]}
+  command -v $helper || $PIP install -I -c "https://opendev.org/openstack/requirements/raw/branch/$REPOSITORY/upper-constraints.txt" ${helpers[$helper]}
 done
 
 echo "Setting permissions..."
