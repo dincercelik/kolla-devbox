@@ -3,6 +3,7 @@ Vagrant.configure("2") do |config|
     v.cpus = 2
     v.memory = 4096
     v.linked_clone = true
+    v.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
 
     if Vagrant.has_plugin?("vagrant-disksize")
       config.disksize.size = "40GB"
