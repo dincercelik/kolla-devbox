@@ -17,6 +17,7 @@ test -z "$OPENSTACK_RELEASE" && REPOSITORY="master" || REPOSITORY="stable/$OPENS
 [[ "$OPENSTACK_RELEASE" == "stein" ]] && PYTHON_VERSION=2 || PYTHON_VERSION=3
 PYTHON="python$PYTHON_VERSION"
 PIP="pip$PYTHON_VERSION"
+test -e /etc/alternatives/python || update-alternatives --install /usr/bin/python python /usr/bin/$PYTHON 10
 
 echo "Installing Ansible..."
 command -v ansible || $PIP install ansible==2.9.*
