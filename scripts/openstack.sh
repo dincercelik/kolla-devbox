@@ -13,7 +13,8 @@ fi
 source "$CONFIG"
 
 test -e "$BASE" || mkdir -p "$BASE" && cd "$BASE"
-test -z "$OPENSTACK_RELEASE" && REPOSITORY="master" || REPOSITORY="stable/$OPENSTACK_RELEASE"
+test -z "$OPENSTACK_RELEASE" && OPENSTACK_RELEASE="master"
+[[ "$OPENSTACK_RELEASE" == "master" ]] && REPOSITORY="master" || REPOSITORY="stable/$OPENSTACK_RELEASE"
 [[ "$OPENSTACK_RELEASE" == "stein" ]] && PYTHON_VERSION=2 || PYTHON_VERSION=3
 PYTHON="python$PYTHON_VERSION"
 PIP="pip$PYTHON_VERSION"
